@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Profil Saya</title>
+    </head>
+    <body>
+        <form action="proses.php" method="post">
+            <label for="nama">Nama:</label><br>
+            <input type="text" id="nama" name="nama" required>
+            <br><br>
+
+            <label>Jenis Kelamin:</label><br>
+
+            <input type="radio" id="laki-laki" name="jenis_kelamin" value="Laki-laki" required>
+            <label for="laki-laki">Laki-laki</label>
+
+            <input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan" required>
+            <label for="perempuan">Perempuan</label>
+            <br><br>
+
+            <label for="prodi">Program Studi:</label><br>
+            <select id="prodi" name="prodi" required>
+                <option value="">-- Pilih Program Studi --</option>
+                <option value="Informatika">Informatika</option>
+                <option value="Sistem Informasi">Sistem Informasi</option>
+                <option value="Teknik Komputer">Teknik Komputer</option>
+            </select>
+            <br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+
+            <label for="alasan">Alasan Mendaftar:</label><br>
+            <textarea id="alasan" name="alasan" rows="5" cols="40"></textarea>
+            <br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+        <a href="profil.html">ke halaman profil</a>
+    </body>
+</html>
