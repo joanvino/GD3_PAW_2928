@@ -14,6 +14,13 @@
     <input type="text" id="inputNama" placeholder="Masukkan nama">
     <button onclick="tampilkanNama()">Tampilkan</button>
 
+    <br><br>
+    <h3>Hitung Kuadrat</h3>
+    <input type="number" id="inputAngka" placeholder="Masukkan angka">
+    <button onclick="hitungKuadrat()">Hitung Kuadrat</button>
+
+    <p id="hasilKuadrat"></p>
+
     <script>
         const judul = document.getElementById("judulHalaman");
         judul.style.color = "red";
@@ -38,9 +45,24 @@
                 alert("Halo, " + nama + "!");
             }
         }
-    </script>
-    <a href="profil.html">ke halaman profil</a>
-    <a href="form.html">ke halaman interaktif</a>
 
+        function hitungKuadrat() {
+            const angka = document.getElementById("inputAngka").value;
+            const hasil = angka * angka;
+
+            document.getElementById("hasilKuadrat").innerHTML = "Hasil kuadrat: " + hasil;
+        }
+
+        function konfirmasiKembali() {
+            return confirm("Apakah Anda yakin ingin kembali?");
+        }
+    </script>
+    <a href="profil.html" onclick="return konfirmasiKembali()">
+        Kembali ke halaman profil
+    </a>
+    <br>
+    <a href="form.html" onclick="return konfirmasiKembali()">
+        Kembali ke halaman form
+    </a>
 </body>
 </html>

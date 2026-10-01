@@ -71,7 +71,17 @@
                 <td>Desain Interaksi</td>
             </tr>
         </table>
-        <a href="form.html">masuk halaman form</a>
-        <a href="interaktif.html">masuk interaktif</a>
+        <script>
+            function konfirmasiKembali() {
+                return confirm("Apakah Anda yakin ingin kembali?");
+            }
+        </script>
+        <a href="form.html" onclick="return konfirmasiKembali()">
+            Kembali ke halaman form
+        </a>
+        <br>
+        <a href="interaktif.html" onclick="return konfirmasiKembali()">
+            Kembali ke halaman interaktif
+        </a>
     </body>
 </html>
