@@ -11,6 +11,8 @@
     <h1 id="judulHalaman">Halaman Interaktif</h1>
     <p id="teks">Teks ini bisa berubah!</p>
     <button onclick="ubahBiru()">Ubah ke Biru</button>
+    <input type="text" id="inputNama" placeholder="Masukkan nama">
+    <button onclick="tampilkanNama()">Tampilkan</button>
 
     <script>
         const judul = document.getElementById("judulHalaman");
@@ -25,6 +27,16 @@
         function ubahBiru() {
             const teks = document.getElementById("teks");
             teks.style.color = "blue";
+        }
+
+        function tampilkanNama() {
+            const nama = document.getElementById("inputNama").value;
+
+            if (nama === "") {
+                alert("Silakan isi nama dulu.");
+            } else {
+                alert("Halo, " + nama + "!");
+            }
         }
     </script>
     <a href="profil.html">ke halaman profil</a>
